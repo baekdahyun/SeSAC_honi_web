@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 실습</title>
+</head>
+<body>
+    <form>
+        <h3>설문조사</h3>
+        <label for="name">이름</label>
+        <input type="text" id="name">
+        <label for="email">이메일</label>
+        <input type="email" placeholder="love@naver.com" id="email">
+
+        <br />
+        <h4>나이</h4>
+        <input type="radio" name="age" id="age1">
+        <label for="age1">10대</label>
+        <input type="radio" name="age" id="age2">
+        <label for="age2">20대</label>
+        <input type="radio" name="age" id="age3">
+        <label for="age3">30대</label>
+        <input type="radio" name="age" id="age4">
+        <label for="age4">40대</label>
+        <input type="radio" name="age" id="age5">
+        <label for="age5">50대</label>
+        <input type="radio" name="age" id="age6">
+        <label for="age6">60대 이상</label>
+
+        <br />
+        <h4>원하는 강의(복수응답 가능합니다.)</h4>
+        <input type="checkbox" name="class" id="class1">
+        <label for="class1">html</label>
+        <input type="checkbox" name="class" id="class2">
+        <label for="class2">javascript</label>
+        <input type="checkbox" name="class" id="class3">
+        <label for="class3">css</label>
+
+        <br /><br />
+        <textarea cols="80" rows="10" placeholder="하고 싶은 말을 써주세요 :)"></textarea>
+        <input type="submit" value="제출">
+    </form>
+    
+</body>
+</html>

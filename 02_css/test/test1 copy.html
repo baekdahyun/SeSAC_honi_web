@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 종합실습</title>
+    <style>
+        h3:hover{
+            background-color: #000;
+            color: #fff;
+        }
+      form {
+        width: 400px;
+      }
+
+      /* focus */
+      textarea {
+        width: 100%;
+        height: 150px;
+      }
+      textarea:focus{
+        background-color: pink;
+        color: #666;
+        border: 2px solid #000;
+      }
+      /* checked */
+      input[type="checkbox"]:checked + label{font-weight: 600;}
+      input[type="checkbox"]#check1:checked + label{color: #fff;background-color: red;}
+      input[type="checkbox"]#check2:checked + label{color: #fff;background-color: blue;}
+      input[type="checkbox"]#check3:checked + label{background-color: yellow;}
+      /* active */
+      input[type="submit"] {
+        margin-top: 20px;
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+      }
+      input[type="submit"]:active{
+        background-color: #b5b2b2;
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>건의 사항을 적어주세요!</h3>
+    <form>
+      <!-- label
+        - 명시적 방식: id와 for 맞춰주기
+        - 암시적 방식: label 내부에 input 쓰기 
+            - checkbox 사용 시 명시적 방식으로 진행하기	
+      -->
+
+      <!-- checkbox와 textarea 만들기 -->
+       <textarea placeholder="건의 사항"></textarea>
+       <input type="checkbox" id="check1" name="ckeck">
+       <label for="check1">빨강</label>
+       <input type="checkbox" id="check2" name="ckeck">
+       <label for="check2">파랑</label>
+       <input type="checkbox" id="check3" name="ckeck">
+       <label for="check3">노랑</label>
+       
+      <input type="submit" value="제출">
+    </form>
+  </body>
+</html>

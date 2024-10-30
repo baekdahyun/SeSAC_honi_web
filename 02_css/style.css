@@ -1,0 +1,15 @@
+@import url('./import.css');
+
+li{
+    color: red;
+    background: blue;
+}
+
+p{
+    background-color: #000;
+    color: red;
+}
+
+div{
+    background-color: yellow;
+}

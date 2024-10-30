@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <style>
+        div.stripes{
+            background-color: navy;
+            color: #fff;
+        }
+        div.stripes div:nth-child(2),
+        div.stripes div:nth-child(6),
+        div.stripes div:nth-child(10){
+            background-color: yellow;
+            color: #000;   
+        }
+    </style>
+</head>
+<body>
+    <div class="stripes">
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>yellow</div>
+    </div>
+</body>
+</html>
