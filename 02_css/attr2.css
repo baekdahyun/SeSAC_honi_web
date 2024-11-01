@@ -139,8 +139,21 @@ html{font-size: 14px;}
     background-color: tomato;
 }
 
-.test{
+.square > img[alt="pooh 사진"]{
     width: 200px;
-    height: 200px;
 }
-div[class=""]
+.ov-h{
+    overflow: hidden;
+}
+.ov-a{
+    overflow: auto;
+}
+.ov-s{
+    overflow: scroll;
+}
+.ov-v{
+    overflow: visible;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    overflow: hidden auto;
+}

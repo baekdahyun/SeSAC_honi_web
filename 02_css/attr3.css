@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background: linear-gradient(#fff, orange);
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+
+.po-s{
+    background-color: pink;
+    /* 이동불가 */
+    position: static;
+}
+.po-r{
+    background-color: aquamarine;
+    /* position relative의 기준은 자기 자신 */
+    /* 자신의 자리는 남아있음 -> 문서 흐름을 해치지 않음 */
+    position: relative;
+    left: 100px;
+}
+.po-a{
+    background-color: gold;
+    position: absolute;
+    right: 100px;
+    top:100px;
+}
+.po-f{
+    background-color: coral;
+    position: fixed;
+    top:100px;
+    right: 200px;
+}
+
+.ab-2{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    line-height: 50px;
+    background-color: aliceblue;
+    top:0;
+    bottom:0;
+}
+
+.parent{
+    position: relative;
+    width: 300px;
+    border: 3px dotted blueviolet;
+}
+.parent > .circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+.circle1{
+    background-color: #9afa9a;
+    left: 200px;
+}
+.circle2{
+    background-color: #ffc850;
+    left: 150px;
+}
+.circle3{
+    background-color: #fa9ada;
+    left: 100px;
+    z-index: 10;
+}
+.circle4{
+    background-color: #9aa4fa;
+    left: 50px;
+    z-index: 8;
+}
+.circle5{
+    background-color: #9aecfa;
+}
+

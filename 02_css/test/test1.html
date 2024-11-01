@@ -5,30 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>실습</title>
     <style>
-        div.stripes{
-            background-color: navy;
-            color: #fff;
+        .po-r{
+            width: 500px;
+            height: 400px;
+            position: relative;
+            background: url('../img/grass.png')no-repeat bottom center;
+            background-size: 100% auto;
         }
-        div.stripes div:nth-child(2),
-        div.stripes div:nth-child(6),
-        div.stripes div:nth-child(10){
-            background-color: yellow;
-            color: #000;   
+        .po-r > div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
         }
+        .con1{
+            left: 26%;
+            bottom: 56%;
+            overflow: hidden;
+            background-color: blue;
+        }
+        .con1 > .con_item1{
+            position: absolute;
+            left: 20%;
+            top:30px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .con1 > .con_item2{
+            position: absolute;
+            left: 20%;
+            top:35px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #000;
+        }        
+        .con2{
+            left: 37%;
+            bottom: 43%;
+            background-color: #4c4cf9;
+        }
+        .con3{
+            left: 44%;
+            bottom: 30%;
+            background-color: #0072ff;
+        }
+        .con4{
+            left: 48%;
+            bottom: 16%;
+            background-color: #00d0ff;
+        }
+        .con5{
+            left: 55%;
+            bottom: 10px;
+            z-index: 2;
+            background-color: skyblue;
+        }     
+        
     </style>
 </head>
 <body>
-    <div class="stripes">
-        <div>navy</div>
-        <div>yellow</div>
-        <div>navy</div>
-        <div>navy</div>
-        <div>navy</div>
-        <div>yellow</div>
-        <div>navy</div>
-        <div>navy</div>
-        <div>navy</div>
-        <div>yellow</div>
+    <div class="po-r">
+        <div class="con1">
+            <span class="con_item1"></span>
+            <span class="con_item2"></span>
+        </div>
+        <div class="con2"></div>
+        <div class="con3"></div>
+        <div class="con4"></div>
+        <div class="con5"></div>
     </div>
 </body>
 </html>
