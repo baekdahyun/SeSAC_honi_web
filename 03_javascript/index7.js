@@ -65,11 +65,12 @@ const areaNum = {
 };
 
 // key값만 뽑아서 배열로 반환
-let key = Object.keys(areaNum)
+let key = Object.keys(areaNum)야
 console.log(key)
 
 // value값만 뽑아서 배열로 반환
 let value = Object.values(areaNum)
 console.log(value)
+
 
 
