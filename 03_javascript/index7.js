@@ -19,14 +19,14 @@ console.log(now.getMilliseconds(), "밀리초") //0 ~ 999
 console.log(now.getDay(), "요일") //0 ~ 6 (일-토)
 
 // 퀴이ㅣㅇ즈
-// 조건문을 사용해서 오늘이 주말인지 평일인지 출력 어뚜케,,
+// 조건문을 사용해서 오늘이 주말인지 평일인지 출력 어뚜케,, 틀렷나본데/.?
 if(Date.getDay === [0,6]){
     console.log("주말입니다")
 } else {
     console.log("평일입니다")
 }
 
-const checkDay = now.getDay()===0||now.getDay()===6?"주말":"평일" // 삼항연산자
+const checkDay = now.getDay()===0 || now.getDay()===6 ? "주말":"평일" // 삼항연산자
 console.log(checkDay)
 
 // 2. Math 객체

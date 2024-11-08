@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>실습</title>
+
     <style>
-        .container{
-            display: flex;
-            width: 500px;
-            height: 500px;
-            border: 2px solid blue;    
+        body{
+            margin: 0;
+            padding: 0 20px;
+            overflow-x: hidden;
         }
-        .container > div{
-            border: 1px solid #000;    
-            width: 100px;
-            height: 100px;
+        p{
+            animation: ani 3s ease-in-out 1;
+            word-break: break-all;
+            font-size: 2vw;
         }
+
+        @keyframes ani{
+            from {`
+                font-size: 1.5vw;
+                transform: translateX(100%);
+            }
+            to {
+                font-size: 2vw;
+                transform: translateX(0);
+            }         
+        }
+
     </style>
-</head>
-<body>
-    <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-    </div>
-</body> 
+  </head>
+  <body>
+    <p>"As I relax on the sofa and gaze around a room a thought hits me: this is exactly the place I've been looking for all my life. A little hideaway in some sinkhole somewhere. I'd always thought of it as a secret, imaginary place, and can barely believe that it actually exists. I close my eyes and take a breath, and wonder of it all settles over me like a gentle cloud."</p>
+  </body>
 </html>
