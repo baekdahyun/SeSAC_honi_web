@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <script src="https://kit.fontawesome.com/39e1805445.js" crossorigin="anonymous"></script>
+    <style>
+        *{transition: all, 0.7s;}
+        body{
+            background-color: coral;
+        }
+        .outer > .inner > h1{
+            /*상속관계가 쌓이면 순위가 높아짐*/
+            font-size: 32px;
+            color:red
+        }
+        .pc, .mobile{display: none;}
+
+        /*
+        기준점
+        - max-width: XXXpx
+          - XXXpx 이하일때,
+          - 가장 큰 사이즈 먼저 제작 후 >> mabile 사이즈 제작
+        - min-width: XXXpx
+          - XXXpx 이상일때,
+          - 가장 작은 사이즈 먼저 제작 후 >> PC 사이즈 제작
+        */
+
+        @media screen and (max-width:700px){            
+            .outer > .inner > h1{
+                font-size: 16px;
+                color: green;
+            }
+            body{
+                background-color: yellowgreen;
+            }
+        }
+
+        @media (max-width:500px) {
+            .outer > .inner > h1{
+                font-size: 10px;
+                color: yellow;
+            }
+            /* body{
+                background-color: black;
+            } */
+            .mobile{display: block;}
+        }
+
+        @media screen and (min-width:501px) {
+            .outer > .inner > h1{
+                color: pink;
+            }
+            .pc{display: block;}
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <h1>hello world</h1>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!-- 500px 기준으로
+     모바일환경에서는 모바일만 보이고 PC에서는 PC만 보이게 -->
+    <p class="mobile">mobile</p>
+    <p class="pc">pc</p>
+    
+</body>
+</html>
