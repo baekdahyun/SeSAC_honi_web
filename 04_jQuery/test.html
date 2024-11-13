@@ -3,21 +3,41 @@
     <!-- TODO1: jQuery CDN 불러오기 -->
      <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
     <style>
-        table{}
-        table caption{}
+        table{
+            width: 300px;
+            padding: 20px;
+        }
+        table caption{
+            font-size: 25px;
+            color: green;
+            letter-spacing: -0.05px;
+        }
         table thead{}
-        table thead th{}
-        table thead th:first-child{}
-        table thead th:last-child{}
-        table td{}
-        table tbody tr:first-child{}
-        table tbody tr:last-child{}
+        table thead th{
+            text-align: center;
+        }
+        table thead th:first-child{
+            color: red;
+        }
+        table thead th:last-child{
+            color: blue;
+        }
+        table td{
+            text-align: center;
+            padding: 30px 15px;
+        }
+        table td span{
+
+        }
+        table tbody tr td:first-child{
+            color: red;
+        }
+        table tbody tr td:last-child{
+            color: blue;
+        }
     </style>
-    <script>
-      
-    </script>
+    
   </head>
 
   <body>
@@ -93,5 +113,24 @@
             </tr>
         </tbody>
     </table>
+
+    <script>
+        $("td").append("<span></span>")
+        let dateVal = $("#date").val()
+        let detailVal = $("#detail").val()
+        
+        $("td").click(function(){
+            let newVal = $(this).text()
+            $("#date").val(newVal)
+        })
+
+        $("button").click(function(e){
+            e.preventDefault();        
+            $("td > span").text(detailVal)
+                
+        })
+
+       
+    </script>
   </body>
 </html>
