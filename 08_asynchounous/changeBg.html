@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백지옥 경험하기;;</title>
+  </head>
+  <body>
+    <h1>배경색이 1초에 한번씩 변경이 됩니다.</h1>
+    <script>
+      /* let color = ["orange", "yellow", "green", "blue"];
+
+      function chCo() {
+        setTimeout(function () {
+          document.body.style.background = "red";
+        }, 1000);
+      }
+
+      function changeBg() {
+        return new Promise(function (resolve, reject) {
+          // 1초동안 고민하는 함수
+          resolve(
+            for(let i = 0; i<color.length; i++){
+
+                setTimeout(function () {
+                document.body.style.background = `${color}`; // then의 콜백의 인자로 전달
+                }, 1000)
+
+            });
+        });
+      };
+
+      // 실행함수
+      function exec() {
+        chCo().then((result) => {
+          // pickDrink가 끝나고 나서 실행되는 작업
+          changeBg();
+          console.log("result", result);
+          // result는 resolve로 전달된 값
+        });
+      }
+
+      exec(); */
+
+      function changeColor(color) {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            document.body.style.background = color;
+            resolve();
+          }, 1000);
+        });
+      }
+      /*
+      // promise객체 > then을 이용한 chaning
+      changeColor("red")
+        .then(() => {
+          return changeColor("orange");
+        })
+        .then(() => {
+          return changeColor("yellow");
+        })
+        .then(() => {
+          return changeColor("green");
+        })
+        .then(() => {
+          return changeColor("blue");
+        }); */
+
+      // async await
+      async function ex() {
+        await changeColor("red");
+        await changeColor("orange");
+        await changeColor("yellow");
+        await changeColor("green");
+        await changeColor("blue");
+      }
+
+      ex();
+    </script>
+  </body>
+</html>
