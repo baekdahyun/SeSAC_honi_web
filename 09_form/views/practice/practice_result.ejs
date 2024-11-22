@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 전송 결과</title>
+    <style>
+      .name {
+        color: pink;
+        font-weight: 700;
+      }
+      ul {
+        padding: 0;
+      }
+      ul > li {
+        list-style: none;
+        border: 1px solid #000;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>결과 확인하기</h1>
+    <h2><span class="name"><%=userInfo.name %></span>님 환영합니다</h2>
+    <ul>
+      <li>
+        성별: <% if(userInfo.male === true) { %>
+        <span>남자</span>
+        <% } else { %>
+        <span>여자</span>
+        <% } %>
+      </li>
+      <li>
+        생년월일: <%= userInfo.birth[0] %>/<%= userInfo.birth[1] %>/<%=
+        userInfo.birth[2] %>
+      </li>
+      <li>관심사: <%= userInfo.like%></li>
+    </ul>
+
+    <%if(addInfo){%>
+    <h2>다른 태그 작성해보기</h2>
+    <p>
+      좋아하는 색깔 :
+      <span class="color" style="font-weight: 600; color: red"
+        ><%= userInfo.color %></span
+      >
+    </p>
+    <p>
+      기념일 :
+      <span style="font-weight: 600; color: skyblue"><%= userInfo.date %></span>
+    </p>
+    <%}%>
+    <a href="/">홈으로 이동하기</a>
+
+    <script>
+      document.addEventListener("DOMcontentLoaded", function () {
+        const colorSpan = document.querySelector(".color");
+        colorSpan.style.color = "<%=userInfo.color%>";
+      });
+    </script>
+  </body>
+</html>

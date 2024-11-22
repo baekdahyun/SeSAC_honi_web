@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제2</title>
+  </head>
+  <body>
+    <h1>실습문제2</h1>
+
+    <form action="/getPrPost" method="post">
+      <label
+        >이름
+        <input
+          type="text"
+          name="name"
+          required
+          minlength="1"
+          title="이름은 필수입니다"
+        />
+      </label>
+
+      <!-- 성별 -->
+      <fieldset>
+        <legend>성별</legend>
+        <input
+          type="radio"
+          name="mf"
+          id="male"
+          value="남자"
+          required
+          title="성별선택은 필수입니다"
+        />
+        <label for="mf1">남자</label>
+        <input
+          type="radio"
+          name="mf"
+          id="female"
+          value="여자"
+          required
+          title="성별선택은 필수입니다"
+        />
+        <label for="mf2">여자</label>
+      </fieldset>
+      <br />
+
+      <!-- 생년월일 -->
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="birth" id="birthYear">
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+        </select>
+        <span>년</span>
+        <select name="birth" id="birthMonth">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span>월</span>
+        <select name="birth" id="birthDay">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span>월</span>
+      </fieldset>
+      <br />
+
+      <!-- 관심사 -->
+      <fieldset>
+        <legend>관심사</legend>
+        <label>
+          <input type="checkbox" name="like" value="여행" />
+          여행
+        </label>
+        <label>
+          <input type="checkbox" name="like" value="패션" />
+          패션
+        </label>
+        <label>
+          <input type="checkbox" name="like" value="음식" />
+          음식
+        </label>
+      </fieldset>
+      <br />
+
+      <!-- 선택 -->
+      <fieldset>
+        <legend>선택</legend>
+        <label
+          >좋아하는 색상
+          <input type="color" name="color" id="" />
+        </label>
+        <label
+          >기념일
+          <input type="date" name="date" id="" />
+        </label>
+      </fieldset>
+      <br />
+
+      <button type="submit">회원가입</button>
+    </form>
+  </body>
+</html>
